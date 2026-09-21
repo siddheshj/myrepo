@@ -1,0 +1,100 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, storiesOnRecord, writingCredits, writingTbd } from "../data/site.js";
+---
+
+<Base
+  title={`Writing — ${site.name}`}
+  description="Books, serials, plays, and screen writing by Sudhir Joglekar, including Akshay Katha and The Blue Revolution."
+>
+  <div class="wrap page-hero">
+    <p class="kicker">On the page</p>
+    <h1>Writing</h1>
+    <p>
+      Serials, plays, and books — including <em>Akshay Katha</em> — plus screen story work. Covers and untitled
+      series are marked until client files arrive. A different public writer of the same name (Belagavi) is not
+      mixed into this shelf.
+    </p>
+  </div>
+
+  <div class="wrap section" style="padding-top:0.4rem;">
+    <div class="grid-2">
+      {
+        writingCredits.map((item) =>
+          item.status === "tbd-cover" ? (
+            <article class="tbd reveal">
+              <span class="badge">Cover to come</span>
+              <p class="meta">{item.kind}</p>
+              <h2>{item.title}</h2>
+              {item.titleMr && <p class="mr">{item.titleMr}</p>}
+              <p>{item.body}</p>
+            </article>
+          ) : (
+            <article class="card reveal">
+              <p class="meta">
+                {item.kind}
+                {item.year ? ` · ${item.year}` : ""}
+              </p>
+              <h2>{item.title}</h2>
+              {item.titleMr && <p class="mr">{item.titleMr}</p>}
+              <p>{item.body}</p>
+              {item.isbn && <p class="caption">ISBN {item.isbn}</p>}
+              {item.href && (
+                <p>
+                  <a href={item.href}>Producing page</a>
+                </p>
+              )}
+            </article>
+          )
+        )
+      }
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Still gathering titles</p>
+        <h2>Serials & plays</h2>
+      </div>
+    </div>
+    <div class="grid-2">
+      {
+        writingTbd.map((item) => (
+          <article class="tbd reveal">
+            <span class="badge">Titles TBD</span>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Voice & stories</p>
+        <h2>On record, not inflated.</h2>
+      </div>
+    </div>
+    <div class="grid-2">
+      {
+        storiesOnRecord.map((item) => (
+          <article class="card reveal">
+            {item.image && (
+              <div class="poster wide">
+                <img src={item.image} alt="" />
+              </div>
+            )}
+            <h3 style="margin-top:1rem;">{item.title}</h3>
+            <p>{item.detail}</p>
+            <p>
+              <a href={item.href}>Open source</a>
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</Base>

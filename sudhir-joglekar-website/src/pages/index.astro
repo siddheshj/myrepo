@@ -1,0 +1,147 @@
+---
+import Base from "../layouts/Base.astro";
+import { actingCredits, site, stills } from "../data/site.js";
+---
+
+<Base
+  title={`${site.name} — Actor, Writer, Producer`}
+  description="Personal site for Sudhir Joglekar: Marathi and Hindi actor, writer, and producer. Akshay Telemedia / अक्षय क्रिएशन्स. Mumbai."
+>
+  <div class="wrap hero">
+    <div>
+      <p class="kicker">{site.location} · Marathi & Hindi</p>
+      <h1>
+        {site.name}
+        <span class="mr" style="display:block; font-size:0.38em; letter-spacing:0.08em; color:var(--burgundy); margin-top:0.2em;">
+          {site.nameMr}
+        </span>
+      </h1>
+      <p class="lede">{site.tagline}</p>
+      <ul class="chips">
+        {site.roles.map((role) => <li>{role}</li>)}
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="/journey">The journey</a>
+        <a class="btn btn-ghost" href="/contact">Enquire</a>
+      </div>
+    </div>
+    <div>
+      <figure class="film-frame reveal">
+        <img
+          src={stills[0].src}
+          alt={stills[0].alt}
+          width="720"
+          height="900"
+        />
+      </figure>
+      <p class="caption">{stills[0].caption}</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <hr class="rule" />
+    <section class="section">
+      <div class="infographic">
+        <div class="stat reveal">
+          <b>4</b>
+          <span>Languages on the resume</span>
+        </div>
+        <div class="stat reveal">
+          <b>INT</b>
+          <span>Two-year dramatics diploma, 1993–95</span>
+        </div>
+        <div class="stat reveal">
+          <b>AIR</b>
+          <span>Radio dramas on Akashvani — titles TBD</span>
+        </div>
+        <div class="stat reveal">
+          <b class="mr" style="font-size:1.8rem;">अक्षय</b>
+          <span>Telemedia / Creations banner</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="section" style="padding-top:0;">
+      <div class="section-head">
+        <div>
+          <p class="kicker">On the record</p>
+          <h2>Public credits, no inventions.</h2>
+        </div>
+        <a class="btn btn-ghost" href="/acting">Acting file</a>
+      </div>
+      <div class="cards">
+        {
+          actingCredits.map((credit) => (
+            <article class="card reveal">
+              <div class="poster">
+                <img src={credit.image} alt={`Publicity artwork for ${credit.title}`} />
+              </div>
+              <p class="meta" style="margin-top:1rem;">
+                {credit.year} · {credit.medium}
+              </p>
+              <h3>{credit.title}</h3>
+              <p>
+                <strong>{credit.role}</strong>
+                <br />
+                {credit.note}
+              </p>
+              <p class="caption">{credit.imageNote}</p>
+            </article>
+          ))
+        }
+        <article class="tbd reveal">
+          <span class="badge">Artwork to come</span>
+          <h3>The Blue Revolution / Nil Kranti</h3>
+          <p>
+            Recent short-film project — story, screenplay and dialogues on the public page; producing noted with
+            Akshay Telemedia. Poster not found on the open web.
+          </p>
+          <p><a href="/producing">Producing spotlight</a></p>
+        </article>
+        <article class="card reveal">
+          <div class="poster wide">
+            <img src="/assets/akka-part1.jpg" alt="Still from Century of a Teacher: Akka, part 1" />
+          </div>
+          <p class="meta" style="margin-top:1rem;">2025 · Short film</p>
+          <h3>Century of a Teacher: Akka</h3>
+          <p>
+            Two-part short on the Akshaya International channel. Shared from Sudhir’s LinkedIn in July 2025. Role
+            versus producing credit is not stated on those posts.
+          </p>
+          <p><a href="/producing">Watch the parts</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="section" style="padding-top:0;">
+      <div class="grid-2">
+        <div class="reveal">
+          <p class="kicker">Craft</p>
+          <h2>Actor. Writer. Producer.</h2>
+          <p>
+            After Indian National Theatre, Sudhir kept one foot in plays and another in a corporate desk, then
+            stepped into television and films as the work arrived. Writing covers serials, plays, and books —
+            including <em>Akshay Katha</em> — and radio dramas for Akashvani sit on the same path, even where
+            programme titles are still to be confirmed.
+          </p>
+          <p>
+            The letterhead says <strong>{site.brand.en}</strong> and
+            <strong class="mr">{site.brand.mr}</strong>: telefilms, films, serials, documentaries.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-solid" href="/writing">Writing</a>
+            <a class="btn btn-ghost" href="/producing">Producing</a>
+          </div>
+        </div>
+        <figure class="reveal">
+          <img src={stills[1].src} alt={stills[1].alt} />
+          <figcaption class="caption">{stills[1].caption}</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</Base>

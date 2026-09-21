@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import { journey, site } from "../data/site.js";
+---
+
+<Base
+  title={`Journey — ${site.name}`}
+  description="An animated career infographic for Sudhir Joglekar: INT training, stage, Akashvani radio, films, books, and Akshay Telemedia."
+  journey
+>
+  <div class="wrap page-hero">
+    <p class="kicker">Infographic</p>
+    <h1>A path, not a myth.</h1>
+    <p>
+      Years and titles below are taken from public listings and the project brief. Where a play, serial, or radio
+      programme is unnamed, the card stays honest. Scroll to walk the line — or sit still; reduced-motion settings
+      show the full timeline at once.
+    </p>
+  </div>
+
+  <div class="wrap">
+    <div class="infographic" style="margin-bottom:2.5rem;">
+      {
+        site.languages.map((lang) => (
+          <div class="stat reveal">
+            <b>{lang.slice(0, 2)}</b>
+            <span>{lang}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="timeline" data-timeline>
+      <div class="timeline-progress" data-progress></div>
+      {
+        journey.map((step, index) => (
+          <article class="step" style={`transition-delay:${index * 40}ms`}>
+            <p class="step-era">
+              Scene {String(index + 1).padStart(2, "0")} · {step.era}
+            </p>
+            <p class="step-year">{step.year}</p>
+            <h2>{step.title}</h2>
+            <p>{step.body}</p>
+            {step.credit && <p class="screenplay">{step.credit}</p>}
+            {step.tbd && (
+              <p>
+                <span class="badge">TBD</span> {step.tbd}
+              </p>
+            )}
+            {step.source && <p class="caption">Source: {step.source}</p>}
+            {step.href && (
+              <p>
+                <a href={step.href}>Open this chapter</a>
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</Base>

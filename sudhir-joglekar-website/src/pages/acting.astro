@@ -1,0 +1,102 @@
+---
+import Base from "../layouts/Base.astro";
+import { actingCredits, actingTbd, site, stills } from "../data/site.js";
+---
+
+<Base
+  title={`Acting — ${site.name}`}
+  description="Verified film credits for Sudhir Joglekar, including Woh Jo Tha Ek Messiah Maulana Azad and Aaichya Gavat Marathit Bol."
+>
+  <div class="wrap page-hero">
+    <p class="kicker">On screen</p>
+    <h1>Acting</h1>
+    <p>
+      Two feature credits are public and named. Earlier television and unnamed roles stay on TBD cards rather than
+      guessed. Portfolio photographs below are of Sudhir; theatrical posters may show other actors.
+    </p>
+  </div>
+
+  <div class="wrap section" style="padding-top:0.5rem;">
+    <div class="cards">
+      {
+        actingCredits.map((credit) => (
+          <article class="card reveal">
+            <div class="poster">
+              <img src={credit.image} alt={`Publicity artwork for ${credit.title}`} />
+            </div>
+            <p class="meta" style="margin-top:1rem;">
+              {credit.year} · {credit.medium}
+            </p>
+            <h2>{credit.title}</h2>
+            {credit.titleMr && <p class="mr">{credit.titleMr}</p>}
+            <p>
+              Role: <strong>{credit.role}</strong>
+            </p>
+            <p>{credit.note}</p>
+            {credit.directors && <p class="caption">Director: {credit.directors}</p>}
+            <p class="caption">{credit.imageNote}</p>
+            <p>
+              {credit.links.map((link) => (
+                <>
+                  <a href={link.href}>{link.label}</a>{" "}
+                </>
+              ))}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="wrap">
+    <article class="card reveal" style="margin-bottom:2rem;">
+      <p class="meta">Teaser</p>
+      <h2>Aaichya Gavat Marathit Bol — official teaser</h2>
+      <div class="poster wide">
+        <img src={actingCredits[1].teaser.image} alt="YouTube thumbnail for the official teaser" />
+      </div>
+      <p>
+        <a href={actingCredits[1].teaser.href}>{actingCredits[1].teaser.label}</a>
+      </p>
+    </article>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Unnamed on public lists</p>
+        <h2>Not invented.</h2>
+      </div>
+    </div>
+    <div class="grid-2">
+      {
+        actingTbd.map((item) => (
+          <article class="tbd reveal">
+            <span class="badge">Title TBD</span>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Portfolio</p>
+        <h2>Stills</h2>
+      </div>
+    </div>
+    <div class="gallery">
+      {
+        stills.map((still) => (
+          <figure class="reveal">
+            <img src={still.src} alt={still.alt} />
+            <figcaption class="caption">{still.caption}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,37 @@
+---
+import { site } from "../data/site.js";
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="kicker">Banner</p>
+      <p>
+        <strong>{site.name}</strong><br />
+        <span class="mr">{site.nameMr}</span>
+      </p>
+      <p>
+        {site.brand.en} · <span class="mr">{site.brand.mr}</span>
+      </p>
+    </div>
+    <div>
+      <p class="kicker">Enquire</p>
+      <p>
+        <a href={`mailto:${site.email}`}>{site.email}</a><br />
+        <a href="/contact">Contact form</a>
+      </p>
+    </div>
+    <div>
+      <p class="kicker">Elsewhere</p>
+      <p>
+        <a href={site.links.talentrack}>Talentrack</a><br />
+        <a href={site.links.linkedin}>LinkedIn</a><br />
+        <a href={site.links.youtube}>Akshaya International</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap notice">
+    Placeholder publicity images — replace before final launch. Staging stills and posters were gathered from public
+    pages; rights are unverified. Film posters may show other cast members and are used as credit artwork only.
+  </div>
+</footer>

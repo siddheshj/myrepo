@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site.js";
+---
+
+<Base title={`Page not found — ${site.name}`} description="That page is not on this site.">
+  <div class="wrap page-hero" style="min-height:50vh;">
+    <p class="kicker">404</p>
+    <h1>Out of frame.</h1>
+    <p>That path is not on Sudhir Joglekar’s site.</p>
+    <div class="btn-row">
+      <a class="btn btn-solid" href="/">Home</a>
+      <a class="btn btn-ghost" href="/contact">Contact</a>
+    </div>
+  </div>
+</Base>
