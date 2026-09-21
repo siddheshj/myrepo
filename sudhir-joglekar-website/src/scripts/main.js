@@ -1,4 +1,5 @@
 const STORAGE_KEY = "sj-theme";
+document.documentElement.classList.add("js");
 const header = document.querySelector("[data-header]");
 const toggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
