@@ -1,19 +1,19 @@
 ---
 import Base from "../layouts/Base.astro";
-import { actingCredits, site, stills } from "../data/site.js";
+import { hero, secondaryPortrait, site } from "../data/site.js";
 ---
 
 <Base
-  title={`${site.name} — Actor, Writer, Producer`}
-  description="Personal site for Sudhir Joglekar: Marathi and Hindi actor, writer, and producer. Akshay Telemedia / अक्षय क्रिएशन्स. Mumbai."
+  title={`${site.fullName} — Actor, Writer, Producer`}
+  description="Personal site for Sudhir Vinayak Joglekar: Marathi and Hindi actor, writer, and producer. Akshay Telemedia / अक्षय क्रिएशन्स. Mumbai."
 >
   <div class="wrap hero">
     <div>
       <p class="kicker">{site.location} · Marathi & Hindi</p>
       <h1>
         {site.name}
-        <span class="mr" style="display:block; font-size:0.38em; letter-spacing:0.08em; color:var(--burgundy); margin-top:0.2em;">
-          {site.nameMr}
+        <span class="mr" style="display:block; font-size:0.38em; letter-spacing:0.08em; color:var(--royal); margin-top:0.2em;">
+          {site.fullNameMr}
         </span>
       </h1>
       <p class="lede">{site.tagline}</p>
@@ -27,14 +27,9 @@ import { actingCredits, site, stills } from "../data/site.js";
     </div>
     <div>
       <figure class="film-frame reveal">
-        <img
-          src={stills[0].src}
-          alt={stills[0].alt}
-          width="720"
-          height="900"
-        />
+        <img src={hero.src} alt={hero.alt} width="720" height="960" />
       </figure>
-      <p class="caption">{stills[0].caption}</p>
+      <p class="caption">{hero.caption}</p>
     </div>
   </div>
 
@@ -43,16 +38,16 @@ import { actingCredits, site, stills } from "../data/site.js";
     <section class="section">
       <div class="infographic">
         <div class="stat reveal">
-          <b>4</b>
-          <span>Languages on the resume</span>
+          <b>5</b>
+          <span>Crafts in the house</span>
         </div>
         <div class="stat reveal">
-          <b>INT</b>
-          <span>Two-year dramatics diploma, 1993–95</span>
+          <b>2014</b>
+          <span>Jab I Met… published</span>
         </div>
         <div class="stat reveal">
-          <b>AIR</b>
-          <span>Radio dramas on Akashvani — titles TBD</span>
+          <b>TBD</b>
+          <span>Acting & radio titles</span>
         </div>
         <div class="stat reveal">
           <b class="mr" style="font-size:1.8rem;">अक्षय</b>
@@ -67,50 +62,42 @@ import { actingCredits, site, stills } from "../data/site.js";
       <div class="section-head">
         <div>
           <p class="kicker">On the record</p>
-          <h2>Public credits, no inventions.</h2>
+          <h2>His work, not someone else’s.</h2>
         </div>
-        <a class="btn btn-ghost" href="/acting">Acting file</a>
       </div>
       <div class="cards">
-        {
-          actingCredits.map((credit) => (
-            <article class="card reveal">
-              <div class="poster">
-                <img src={credit.image} alt={`Publicity artwork for ${credit.title}`} />
-              </div>
-              <p class="meta" style="margin-top:1rem;">
-                {credit.year} · {credit.medium}
-              </p>
-              <h3>{credit.title}</h3>
-              <p>
-                <strong>{credit.role}</strong>
-                <br />
-                {credit.note}
-              </p>
-              <p class="caption">{credit.imageNote}</p>
-            </article>
-          ))
-        }
+        <article class="card reveal">
+          <div class="poster book">
+            <img src="/assets/book-jab-i-met.jpg" alt="Cover of Jab I Met… by Sudhir Vinayak Joglekar" />
+          </div>
+          <p class="meta" style="margin-top:1rem;">2014 · Book</p>
+          <h3>Jab I Met…</h3>
+          <p>English stories by Sudhir Vinayak Joglekar. The client cover is on the Writing page.</p>
+          <p><a href="/writing">Writing</a></p>
+        </article>
         <article class="tbd reveal">
           <span class="badge">Artwork to come</span>
           <h3>The Blue Revolution / Nil Kranti</h3>
           <p>
-            Recent short-film project — story, screenplay and dialogues on the public page; producing noted with
-            Akshay Telemedia. Poster not found on the open web.
+            Recent short film, as stated by Siddhesh Joglekar — story, screenplay and dialogues; producing with
+            Akshay Telemedia. Poster still to come.
           </p>
           <p><a href="/producing">Producing spotlight</a></p>
         </article>
-        <article class="card reveal">
-          <div class="poster wide">
-            <img src="/assets/akka-part1.jpg" alt="Still from Century of a Teacher: Akka, part 1" />
-          </div>
-          <p class="meta" style="margin-top:1rem;">2025 · Short film</p>
-          <h3>Century of a Teacher: Akka</h3>
+        <article class="tbd reveal">
+          <span class="badge">Titles TBD</span>
+          <h3>Acting</h3>
           <p>
-            Two-part short on the Akshaya International channel. Shared from Sudhir’s LinkedIn in July 2025. Role
-            versus producing credit is not stated on those posts.
+            Stage and screen in Marathi and Hindi. Named film credits that belong to another Sudhir Joglekar are
+            not listed here.
           </p>
-          <p><a href="/producing">Watch the parts</a></p>
+          <p><a href="/acting">Acting file</a></p>
+        </article>
+        <article class="tbd reveal">
+          <span class="badge">Cover to come</span>
+          <h3>Akshay Katha</h3>
+          <p>Named in the family brief. A cover scan will replace this card.</p>
+          <p><a href="/writing">Writing</a></p>
         </article>
       </div>
     </section>
@@ -123,14 +110,9 @@ import { actingCredits, site, stills } from "../data/site.js";
           <p class="kicker">Craft</p>
           <h2>Actor. Writer. Producer.</h2>
           <p>
-            After Indian National Theatre, Sudhir kept one foot in plays and another in a corporate desk, then
-            stepped into television and films as the work arrived. Writing covers serials, plays, and books —
-            including <em>Akshay Katha</em> — and radio dramas for Akashvani sit on the same path, even where
-            programme titles are still to be confirmed.
-          </p>
-          <p>
-            The letterhead says <strong>{site.brand.en}</strong> and
-            <strong class="mr">{site.brand.mr}</strong>: telefilms, films, serials, documentaries.
+            The house is {site.brand.en} / <span class="mr">{site.brand.mr}</span>: acting, writing, producing,
+            radio, and documentaries. Where a title is not yet in the family file, this site stays blank rather
+            than borrow another man’s credits.
           </p>
           <div class="btn-row">
             <a class="btn btn-solid" href="/writing">Writing</a>
@@ -138,8 +120,8 @@ import { actingCredits, site, stills } from "../data/site.js";
           </div>
         </div>
         <figure class="reveal">
-          <img src={stills[1].src} alt={stills[1].alt} />
-          <figcaption class="caption">{stills[1].caption}</figcaption>
+          <img src={secondaryPortrait.src} alt={secondaryPortrait.alt} />
+          <figcaption class="caption">{secondaryPortrait.caption}</figcaption>
         </figure>
       </div>
     </section>

@@ -1,21 +1,27 @@
-# Sudhir Joglekar — personal website
+# Sudhir Vinayak Joglekar — personal website
 
-Static Astro site for **Sudhir Joglekar** (Marathi & Hindi actor, writer, producer) and the **Akshay Telemedia / अक्षय क्रिएशन्स** banner.
+Static Astro site for **Sudhir Vinayak Joglekar** (Marathi & Hindi actor, writer, producer) and the **Akshay Telemedia / अक्षय क्रिएशन्स** banner.
 
 This folder is self-contained so it does not replace the repository root README.
+
+**Identity:** this site is only for Sudhir Vinayak Joglekar. It does not use Talentrack/open-web stills or film credits that belong to another person of the same name. Portraits and the *Jab I Met…* cover are client-supplied.
 
 ## Pages
 
 | Path | Contents |
 | --- | --- |
-| `/` | Home — identity, portrait, public-credit teasers |
+| `/` | Home — identity, Nehru-jacket portrait, *Jab I Met…*, TBD cards |
 | `/journey` | Animated career infographic (scroll line + stepped cards) |
-| `/acting` | Named film credits + TBD cards + portfolio stills |
-| `/writing` | *Akshay Katha* placeholder cover, catalogued books, serials/plays TBD |
-| `/producing` | *The Blue Revolution / Nil Kranti* spotlight (poster TBD), *Akka*, banner |
+| `/acting` | Craft statement + TBD titles + client portraits |
+| `/writing` | Featured *Jab I Met…* cover; *Akshay Katha* placeholder; serials/plays TBD |
+| `/producing` | *The Blue Revolution / Nil Kranti* spotlight (poster TBD) |
 | `/contact` | Netlify form + letterhead address (flagged as possibly historical) |
 
 Radio sits on Home (chip) and Journey. Untitled radio programmes are **not** invented.
+
+## Theme
+
+Royal blue + orange. Light and dark modes. Default follows `prefers-color-scheme`; the header toggle writes `localStorage` key `sj-theme`.
 
 ## Local
 
@@ -54,18 +60,16 @@ Preview deploy (no production alias):
 npx netlify deploy --dir=dist
 ```
 
-**If the Git repo root is the Netlify site**, set Base directory in Site configuration → Build & deploy to `sudhir-joglekar-website`. Do not add a second `netlify.toml` at the repo root unless you intend the whole repo to be one site.
+**If the Git repo root is the Netlify site**, set Base directory in Site configuration → Build & deploy to `sudhir-joglekar-website`.
 
 Enable **Netlify Forms** so the contact form is collected.
 
 ## Facts & assets
 
-Credits are limited to public listings and the project brief. Untitled serials, plays, radio programmes, telefilms, and extra documentaries use TBD cards.
+Named work on this staging site: *Jab I Met…* (2014) and *The Blue Revolution / Nil Kranti* (as stated by Siddhesh Joglekar). Acting, radio, serials, plays, telefilms, further books, and documentaries use TBD cards.
 
-Staging images live in `public/assets/`. Sources and rights notes: [SOURCES.md](./SOURCES.md). Footer on every page: *Placeholder publicity images — replace before final launch.*
-
-The *Akshay Katha* cover and *Nil Kranti* poster were not found publicly; those cards are honest placeholders.
+Client images live in `public/assets/`. See [SOURCES.md](./SOURCES.md).
 
 ## Motion
 
-Journey uses Intersection Observer and a scroll-linked ink line. `prefers-reduced-motion: reduce` shows the timeline fully drawn, with no enter animations.
+Journey uses Intersection Observer and a scroll-linked line. `prefers-reduced-motion: reduce` shows the timeline fully drawn, with no enter animations.

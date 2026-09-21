@@ -1,91 +1,44 @@
 ---
 import Base from "../layouts/Base.astro";
-import { actingCredits, actingTbd, site, stills } from "../data/site.js";
+import { site, stills } from "../data/site.js";
 ---
 
 <Base
-  title={`Acting — ${site.name}`}
-  description="Verified film credits for Sudhir Joglekar, including Woh Jo Tha Ek Messiah Maulana Azad and Aaichya Gavat Marathit Bol."
+  title={`Acting — ${site.fullName}`}
+  description="Acting by Sudhir Vinayak Joglekar. Named film credits that belong to another person of the same name are not listed."
 >
   <div class="wrap page-hero">
-    <p class="kicker">On screen</p>
+    <p class="kicker">On screen & stage</p>
     <h1>Acting</h1>
     <p>
-      Two feature credits are public and named. Earlier television and unnamed roles stay on TBD cards rather than
-      guessed. Portfolio photographs below are of Sudhir; theatrical posters may show other actors.
+      Performance is part of the craft — Marathi and Hindi, stage and screen. Individual titles will be published
+      from Sudhir’s own file. Credits that belong to another Sudhir Joglekar are not used here.
     </p>
   </div>
 
   <div class="wrap section" style="padding-top:0.5rem;">
-    <div class="cards">
-      {
-        actingCredits.map((credit) => (
-          <article class="card reveal">
-            <div class="poster">
-              <img src={credit.image} alt={`Publicity artwork for ${credit.title}`} />
-            </div>
-            <p class="meta" style="margin-top:1rem;">
-              {credit.year} · {credit.medium}
-            </p>
-            <h2>{credit.title}</h2>
-            {credit.titleMr && <p class="mr">{credit.titleMr}</p>}
-            <p>
-              Role: <strong>{credit.role}</strong>
-            </p>
-            <p>{credit.note}</p>
-            {credit.directors && <p class="caption">Director: {credit.directors}</p>}
-            <p class="caption">{credit.imageNote}</p>
-            <p>
-              {credit.links.map((link) => (
-                <>
-                  <a href={link.href}>{link.label}</a>{" "}
-                </>
-              ))}
-            </p>
-          </article>
-        ))
-      }
-    </div>
-  </div>
-
-  <div class="wrap">
-    <article class="card reveal" style="margin-bottom:2rem;">
-      <p class="meta">Teaser</p>
-      <h2>Aaichya Gavat Marathit Bol — official teaser</h2>
-      <div class="poster wide">
-        <img src={actingCredits[1].teaser.image} alt="YouTube thumbnail for the official teaser" />
-      </div>
-      <p>
-        <a href={actingCredits[1].teaser.href}>{actingCredits[1].teaser.label}</a>
-      </p>
-    </article>
-  </div>
-
-  <div class="wrap section" style="padding-top:0;">
-    <div class="section-head">
-      <div>
-        <p class="kicker">Unnamed on public lists</p>
-        <h2>Not invented.</h2>
-      </div>
-    </div>
     <div class="grid-2">
-      {
-        actingTbd.map((item) => (
-          <article class="tbd reveal">
-            <span class="badge">Title TBD</span>
-            <h3>{item.title}</h3>
-            <p>{item.detail}</p>
-          </article>
-        ))
-      }
+      <article class="tbd reveal">
+        <span class="badge">Titles TBD</span>
+        <h2>Films</h2>
+        <p>
+          Feature and telefilm acting titles wait on confirmation. This page will not list another actor’s
+          filmography.
+        </p>
+      </article>
+      <article class="tbd reveal">
+        <span class="badge">Titles TBD</span>
+        <h2>Plays & television</h2>
+        <p>Stage and television roles will be named when the family list arrives.</p>
+      </article>
     </div>
   </div>
 
   <div class="wrap section" style="padding-top:0;">
     <div class="section-head">
       <div>
-        <p class="kicker">Portfolio</p>
-        <h2>Stills</h2>
+        <p class="kicker">Portraits</p>
+        <h2>Client stills</h2>
       </div>
     </div>
     <div class="gallery">

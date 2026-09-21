@@ -1,11 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { site, stills } from "../data/site.js";
+import { secondaryPortrait, site } from "../data/site.js";
 ---
 
 <Base
-  title={`Contact — ${site.name}`}
-  description="Enquire with Sudhir Joglekar and Akshay Telemedia for acting, writing, producing, radio, and documentary work."
+  title={`Contact — ${site.fullName}`}
+  description="Enquire with Sudhir Vinayak Joglekar and Akshay Telemedia for acting, writing, producing, radio, and documentary work."
 >
   <div class="wrap page-hero">
     <p class="kicker">Akshay Telemedia</p>
@@ -68,9 +68,9 @@ import { site, stills } from "../data/site.js";
 
       <div>
         <figure class="film-frame reveal">
-          <img src={stills[2].src} alt={stills[2].alt} />
+          <img src={secondaryPortrait.src} alt={secondaryPortrait.alt} />
         </figure>
-        <p class="caption">{stills[2].caption}</p>
+        <p class="caption">{secondaryPortrait.caption}</p>
         <div class="card" style="margin-top:1rem;">
           <p class="meta">Direct</p>
           <p>
@@ -82,7 +82,6 @@ import { site, stills } from "../data/site.js";
           </p>
           <p class="caption">{site.letterhead.note}</p>
           <p>
-            <a href={site.links.talentrack}>Talentrack portfolio</a><br />
             <a href={site.links.linkedin}>LinkedIn</a><br />
             <a href={site.links.youtube}>Akshaya International on YouTube</a>
           </p>

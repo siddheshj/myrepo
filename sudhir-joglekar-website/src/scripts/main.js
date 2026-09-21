@@ -1,7 +1,37 @@
+const STORAGE_KEY = "sj-theme";
 const header = document.querySelector("[data-header]");
 const toggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
+const themeBtn = document.querySelector("[data-theme-toggle]");
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function currentTheme() {
+  return document.documentElement.getAttribute("data-theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  try {
+    localStorage.setItem(STORAGE_KEY, theme);
+  } catch {
+    /* ignore */
+  }
+  if (themeBtn) {
+    themeBtn.setAttribute(
+      "aria-label",
+      theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    );
+    themeBtn.setAttribute("aria-pressed", String(theme === "dark"));
+  }
+}
+
+if (themeBtn) {
+  applyTheme(currentTheme());
+  themeBtn.addEventListener("click", () => {
+    applyTheme(currentTheme() === "dark" ? "light" : "dark");
+  });
+}
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
@@ -63,12 +93,10 @@ if (form) {
 }
 
 if (header) {
-  let last = 0;
   window.addEventListener(
     "scroll",
     () => {
-      last = window.scrollY;
-      header.classList.toggle("is-scrolled", last > 8);
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
     },
     { passive: true }
   );

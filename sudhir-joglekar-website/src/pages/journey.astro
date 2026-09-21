@@ -4,17 +4,17 @@ import { journey, site } from "../data/site.js";
 ---
 
 <Base
-  title={`Journey — ${site.name}`}
-  description="An animated career infographic for Sudhir Joglekar: INT training, stage, Akashvani radio, films, books, and Akshay Telemedia."
+  title={`Journey — ${site.fullName}`}
+  description="Career infographic for Sudhir Vinayak Joglekar: acting, writing, radio, Akshay Telemedia, and The Blue Revolution / Nil Kranti."
   journey
 >
   <div class="wrap page-hero">
     <p class="kicker">Infographic</p>
-    <h1>A path, not a myth.</h1>
+    <h1>A path, not a mix-up.</h1>
     <p>
-      Years and titles below are taken from public listings and the project brief. Where a play, serial, or radio
-      programme is unnamed, the card stays honest. Scroll to walk the line — or sit still; reduced-motion settings
-      show the full timeline at once.
+      This timeline is for <strong>{site.fullName}</strong> only. Acting, radio, and documentary titles stay TBD
+      until the family list arrives. Scroll to walk the line — or sit still; reduced-motion settings show the full
+      timeline at once.
     </p>
   </div>
 
@@ -28,6 +28,10 @@ import { journey, site } from "../data/site.js";
           </div>
         ))
       }
+      <div class="stat reveal">
+        <b>TBD</b>
+        <span>Untitled work stays blank</span>
+      </div>
     </div>
   </div>
 
@@ -49,7 +53,6 @@ import { journey, site } from "../data/site.js";
                 <span class="badge">TBD</span> {step.tbd}
               </p>
             )}
-            {step.source && <p class="caption">Source: {step.source}</p>}
             {step.href && (
               <p>
                 <a href={step.href}>Open this chapter</a>

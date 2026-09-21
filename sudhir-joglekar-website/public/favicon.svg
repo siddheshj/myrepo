@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Akshay Telemedia">
-  <rect width="64" height="64" rx="8" fill="#1c1410"/>
-  <path d="M12 50 L32 12 L52 50 H42 L32 30 L22 50 Z" fill="#f3ead8"/>
-  <path d="M20 50 H44" stroke="#7a1f32" stroke-width="4"/>
-  <g fill="#b08a4f">
+  <rect width="64" height="64" rx="8" fill="#123a8c"/>
+  <path d="M12 50 L32 12 L52 50 H42 L32 30 L22 50 Z" fill="#f7f4ee"/>
+  <path d="M20 50 H44" stroke="#f26b21" stroke-width="4"/>
+  <g fill="#f26b21">
     <rect x="26" y="22" width="12" height="2.2" transform="skewX(-18)"/>
     <rect x="26" y="26.5" width="12" height="2.2" transform="skewX(-18)"/>
     <rect x="26" y="31" width="12" height="2.2" transform="skewX(-18)"/>

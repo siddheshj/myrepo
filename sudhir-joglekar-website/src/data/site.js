@@ -1,15 +1,16 @@
-/** Public, verified facts only. Untitled work stays TBD — never invent credits. */
+/** Client-stated identity only. Do not mix in another Sudhir Joglekar’s filmography. */
 
 export const site = {
   name: "Sudhir Joglekar",
   nameMr: "सुधीर जोगलेकर",
   fullName: "Sudhir Vinayak Joglekar",
+  fullNameMr: "सुधीर विनायक जोगलेकर",
   roles: ["Actor", "Writer", "Producer", "Radio", "Documentaries"],
   rolesMr: "अभिनेता · लेखक · निर्माता",
   tagline:
-    "Marathi and Hindi screen, stage, and stories — from Indian National Theatre training to films, books, radio, and the production banner Akshay Telemedia.",
+    "Sudhir Vinayak Joglekar — Marathi and Hindi actor, writer, and producer. Radio and documentaries sit alongside the banner Akshay Telemedia / अक्षय क्रिएशन्स. Named titles appear only when the family has confirmed them.",
   location: "Mumbai",
-  languages: ["Marathi", "Hindi", "English", "Gujarati"],
+  languages: ["Marathi", "Hindi", "English"],
   brand: {
     en: "Akshay Telemedia",
     mr: "अक्षय क्रिएशन्स",
@@ -24,11 +25,8 @@ export const site = {
     note: "Address as printed on an Akshay Telemedia letterhead. Confirm before using as a current postal address.",
   },
   links: {
-    talentrack:
-      "https://www.talentrack.in/talent/talentportfolio/uid/bb694dc32bc669b11252aff5956592fc",
     linkedin: "https://www.linkedin.com/in/sudhir-joglekar-2795984",
     youtube: "https://www.youtube.com/@Akshayaintl",
-    imdbName: "https://www.imdb.com/name/nm10395978/",
   },
 };
 
@@ -43,172 +41,91 @@ export const nav = [
 
 export const journey = [
   {
-    era: "Foundation",
+    era: "Identity",
     year: "Mumbai",
-    title: "University graduate, then the stage",
-    body: "A graduate of Mumbai University, Sudhir completed a two-year course in dramatics at Indian National Theatre (May 1993 – May 1995). He kept acting in plays while holding a corporate job, then took television and film work as it came.",
-    source: "Talentrack biography",
+    title: "Sudhir Vinayak Joglekar",
+    body: "Actor, writer, and producer working in Marathi and Hindi, with radio and documentary work in the same house. This timeline names only what the family has confirmed. Open-web film credits that belong to another person of the same name are not used here.",
   },
   {
-    era: "Stage",
-    year: "1993–",
-    title: "Plays, in parallel with work",
-    body: "Theatre sits at the start of the craft. Individual play titles are not listed on public credit pages yet — they belong here once confirmed.",
-    tbd: "Play titles to be confirmed",
-  },
-  {
-    era: "Radio",
-    year: "Akashvani",
-    title: "Several dramas on Akashvani",
-    body: "Public resume notes a body of radio drama for Akashvani (All India Radio). Programme names are not published on the same listing — radio lives on this timeline until titles are supplied.",
-    tbd: "Radio programme titles to be confirmed",
-    source: "Talentrack",
-  },
-  {
-    era: "Screen",
-    year: "2010s",
-    title: "Television and film, role by role",
-    body: "Portfolio dates mention a presenter turn on a reality show (2010), a role listed as Dev Sir (2011–12), and a scientist role (2015). Those production titles are not named in public listings, so they are not invented here.",
-    tbd: "TV / film titles to be confirmed",
-    source: "Talentrack work dates",
-  },
-  {
-    era: "Film",
-    year: "2019",
-    title: "Woh Jo Tha Ek Messiah Maulana Azad",
-    body: "Feature film. Public cast listings credit Sudhir as Hazrat Maulana Khairuddin — Maulana Azad’s father. Directed by Dr. Rajendra Gupta Sanjay and Sanjay Singh Negi; released 18 January 2019.",
+    era: "Acting",
+    year: "Screen & stage",
+    title: "Acting — titles to be confirmed",
+    body: "Performance is part of the craft: stage and screen in Marathi and Hindi. Individual play and film titles will be listed when Sudhir’s own file is supplied — not borrowed from another Sudhir Joglekar.",
+    tbd: "Acting titles to be confirmed",
     href: "/acting",
-    credit: "Actor · Hazrat Maulana Khairuddin",
+  },
+  {
+    era: "Page",
+    year: "2014",
+    title: "Jab I Met…",
+    body: "English collection of stories by Sudhir Vinayak Joglekar, published by Partridge India. Chance encounters, work, student life, and the road — with a glance at Hindi cinema. The client cover is on the Writing page.",
+    href: "/writing",
+    credit: "Book · Sudhir Vinayak Joglekar",
   },
   {
     era: "Page",
     year: "Books",
-    title: "Stories on the page, including Akshay Katha",
-    body: "Writing spans serials, plays, and books. Akshay Katha is part of that shelf; a cover scan is still to come. A separately catalogued English collection, Jab I Met… (Partridge India, 2014), and a Hindi volume, Chhoti Si Yah Duniya, are public under the name Sudhir Vinayak Joglekar.",
+    title: "Akshay Katha, serials, and plays",
+    body: "Further writing includes serials, plays, and the book Akshay Katha. Covers and programme titles stay on TBD cards until client scans arrive.",
+    tbd: "Akshay Katha cover and serial/play titles to be confirmed",
     href: "/writing",
   },
   {
+    era: "Radio",
+    year: "Voice",
+    title: "Radio — programmes to be confirmed",
+    body: "Radio is part of the practice. Programme names are not invented for this site.",
+    tbd: "Radio titles to be confirmed",
+  },
+  {
     era: "Banner",
-    year: "2015–",
+    year: "Akshay",
     title: "Akshay Telemedia / अक्षय क्रिएशन्स",
-    body: "The production and media banner on the letterhead. LinkedIn lists Sudhir as Managing Director at Akshaya Telemedia from August 2015, with documentary and television programme-making in the mix. Company records also note Akshaya Telemedia Insurance Marketing LLP.",
+    body: "The production and media banner on the letterhead: telefilms, films, serials, and documentaries. LinkedIn lists Sudhir as Managing Director at Akshaya Telemedia.",
     href: "/producing",
   },
   {
-    era: "Film",
-    year: "2024",
-    title: "Aaichya Gavat Marathit Bol",
-    body: "Marathi feature. Cast listings credit Sudhir as Anil Savardekar. Directed by Omi Vaidya; official teaser from Rajshri Marathi. Theatrical poster artwork features the film’s leads — treated here as credit art, not a likeness still.",
-    href: "/acting",
-    credit: "Actor · Anil Savardekar",
-  },
-  {
-    era: "Shorts",
-    year: "2025",
-    title: "Century of a Teacher: Akka",
-    body: "A short film in two parts, shared from Sudhir’s LinkedIn in July 2025 and hosted on the Akshaya International YouTube channel. On-screen role versus producing credit is not spelled out on the public posts — listed with that honesty.",
+    era: "Docs",
+    year: "Lens",
+    title: "Documentaries — titles to be confirmed",
+    body: "Documentary work belongs with the banner. Individual titles will be added from the family file, not guessed from search results.",
+    tbd: "Documentary titles to be confirmed",
     href: "/producing",
   },
   {
     era: "Now",
     year: "Recent",
     title: "The Blue Revolution / Nil Kranti",
-    body: "A recent short-film project. Public pages have credited Sudhir with story, screenplay and dialogues; the family brief also places it among producing work from Akshay Telemedia. No public poster or production stills were found — the spotlight uses a placeholder until client artwork arrives.",
+    body: "A recent short-film project, as stated by Siddhesh Joglekar: Sudhir on story, screenplay and dialogues, with producing placed under Akshay Telemedia. Poster and stills are still to come.",
     href: "/producing",
     tbd: "Poster and stills to come",
   },
 ];
 
-export const actingCredits = [
-  {
-    title: "Woh Jo Tha Ek Messiah Maulana Azad",
-    titleAlt: "Wo Jo Tha Ek Messiah Maulana Azad",
-    year: "2019",
-    medium: "Hindi feature",
-    role: "Hazrat Maulana Khairuddin",
-    note: "Biographical film on Maulana Azad, India’s first education minister. Public listings also describe the part as Maulana Azad’s father.",
-    directors: "Dr. Rajendra Gupta Sanjay & Sanjay Singh Negi",
-    released: "18 January 2019",
-    image: "/assets/maulana-azad-poster-press.jpg",
-    imageNote:
-      "Press poster from 2019 trailer/poster coverage. Artwork may depict other cast; used as film-credit art.",
-    links: [
-      { label: "IMDb", href: "https://www.imdb.com/title/tt9557704/" },
-      {
-        label: "Filmibeat",
-        href: "https://www.filmibeat.com/celebs/sudhir-joglekar.html",
-      },
-    ],
-  },
-  {
-    title: "Aaichya Gavat Marathit Bol",
-    titleMr: "आईच्या गावात मराठीत बोल",
-    year: "2024",
-    medium: "Marathi feature",
-    role: "Anil Savardekar",
-    note: "Family comedy-romance. An American-born Marathi man travels to India seeking a bride and collides with language, custom, and home.",
-    directors: "Omi Vaidya",
-    image: "/assets/aaichya-gavat-poster.jpg",
-    imageNote:
-      "Theatrical poster features the film’s leads, not Sudhir. Used as credit artwork only.",
-    teaser: {
-      label: "Official teaser — Rajshri Marathi",
-      href: "https://www.youtube.com/watch?v=cji3nHvW2OY",
-      image: "/assets/aaichya-gavat-teaser.jpg",
-    },
-    links: [{ label: "IMDb", href: "https://www.imdb.com/title/tt30489972/" }],
-  },
-];
-
-export const actingTbd = [
-  {
-    title: "Feature / TV title to be confirmed",
-    detail:
-      "Talentrack lists a lawyer role with dates spanning 2022–2026, noting director Omi Vaidya. That may overlap the 2024 Marathi feature above; until the production title is confirmed separately, it is not listed as a second film.",
-  },
-  {
-    title: "Scientist — title to be confirmed",
-    detail: "Portfolio dates: July 2015. Production name not published on that listing.",
-  },
-  {
-    title: "Dev Sir — title to be confirmed",
-    detail: "Portfolio dates: April 2011 – April 2012. Production name not published on that listing.",
-  },
-  {
-    title: "Presenter, reality show — title to be confirmed",
-    detail: "Portfolio dates: January–June 2010. Show title not published on that listing.",
-  },
-];
-
 export const writingCredits = [
+  {
+    title: "Jab I Met…",
+    kind: "Book · English",
+    year: "2014",
+    status: "featured",
+    image: "/assets/book-jab-i-met.jpg",
+    imageAlt: "Cover of Jab I Met… by Sudhir Vinayak Joglekar",
+    body: "Collection of stories published by Partridge India (12 September 2014) under the name Sudhir Vinayak Joglekar. Catalogues describe chance encounters across work, student life, and the road — with a self-deprecating eye and frequent glances at Hindi cinema.",
+    isbn: "978-1-4828-3722-3",
+  },
   {
     title: "Akshay Katha",
     titleMr: "अक्षय कथा",
     kind: "Book",
     status: "tbd-cover",
-    body: "Listed among Sudhir’s books on this site’s brief. No public cover or catalogue scan was found under this exact title for this author — a client scan will replace the placeholder.",
-  },
-  {
-    title: "Jab I Met…",
-    kind: "Book · English",
-    year: "2014",
-    status: "catalogued",
-    body: "Collection of stories published by Partridge India (12 September 2014) under the name Sudhir Vinayak Joglekar. Catalogues describe chance encounters across work, student life, and the road — with a self-deprecating eye and frequent glances at Hindi cinema.",
-    isbn: "978-1-4828-3722-3",
-  },
-  {
-    title: "Chhoti Si Yah Duniya",
-    titleMr: "छोटी सी यह दुनिया",
-    kind: "Book · Hindi",
-    status: "catalogued",
-    body: "Hindi volume catalogued under Sudhir Vinayak Joglekar. Publisher copy frames it as a kaleidoscope of office politics, student mischief, a mother’s love, and the wins and losses of business — a companion shelf to the English stories.",
+    body: "Named among Sudhir’s books in the family brief. A cover scan has not been supplied yet — this card stays a placeholder.",
   },
   {
     title: "The Blue Revolution / Nil Kranti",
     titleMr: "नील क्रांती",
     kind: "Short film · story, screenplay & dialogues",
     status: "film-writing",
-    body: "Public pages for the short film have credited Sudhir with story, screenplay and dialogues. A cricket-and-family story moving from the blue light of a phone to the blue sky over a ground. Poster still to come.",
+    body: "As stated by Siddhesh Joglekar: Sudhir wrote the story, screenplay and dialogues. A cricket-and-family story. Poster still to come.",
     href: "/producing",
   },
 ];
@@ -216,29 +133,11 @@ export const writingCredits = [
 export const writingTbd = [
   {
     title: "Serials — titles to be confirmed",
-    detail:
-      "Writing for serials is part of the practice. Individual show names are not published on the sources used for this staging site.",
+    detail: "Writing for serials is part of the practice. Individual show names wait on the family list.",
   },
   {
     title: "Plays — titles to be confirmed",
-    detail:
-      "Stage writing is noted alongside acting in plays. Script titles will be added when supplied.",
-  },
-];
-
-export const storiesOnRecord = [
-  {
-    title: "SVJ Stories — Kaun Bana Crorepati (teaser)",
-    detail:
-      "A teaser posted on the Akshaya International YouTube channel, titled Kaun Bana Crorepati | SVJ Stories. This is a channel video title — not a claim that Sudhir appeared on the television quiz show.",
-    href: "https://www.youtube.com/watch?v=XMnSuIwdi2M",
-    image: "/assets/svj-stories-kbc-teaser.jpg",
-  },
-  {
-    title: "Marathi story narration: “Terrorist”",
-    detail:
-      "Listed among portfolio videos on Talentrack, together with Hindi story narration, “The Hindi Story,” “Sugar and Me” (English), and a Marathi presentation. Recorded storytelling — not filed here as a television serial credit.",
-    href: site.links.talentrack,
+    detail: "Stage writing sits with the acting work. Script titles will be added when supplied.",
   },
 ];
 
@@ -253,72 +152,55 @@ export const producing = {
     synopsisMr:
       "एका आजोबांची गोष्ट, दोन मुली आणि एक विश्वचषक — मोबाईलच्या निळ्या प्रकाशातून मैदानाच्या निळ्या आकाशापर्यंतचा प्रवास.",
     credits: [
-      "Story, screenplay & dialogues — Sudhir Joglekar (as published on the project page)",
-      "Short film publicly presented by Siddhesh Joglekar",
-      "Producing — placed with Akshay Telemedia on this site’s brief; poster and stills not yet public",
-    ],
-    note: "The project page at siddheshj.com/the-blue-revolution was indexed with the copy above; it returned HTTP 404 when re-fetched during this build. Wording is used as previously published, not invented.",
-  },
-  akka: {
-    title: "Century of a Teacher: Akka",
-    year: "2025",
-    detail:
-      "Short film in two parts. Shared from Sudhir Joglekar’s LinkedIn (29 July 2025) with YouTube links; both parts sit on the Akshaya International channel. YouTube currently labels the uploads “July 24, 2025.” Specific on-screen or producing credit is not stated on those posts.",
-    parts: [
-      {
-        label: "Part 1",
-        href: "https://youtu.be/gocfjHNNUXI",
-        image: "/assets/akka-part1.jpg",
-      },
-      {
-        label: "Part 2",
-        href: "https://youtu.be/a09fFZelPOc",
-        image: "/assets/akka-part2.jpg",
-      },
+      "Story, screenplay & dialogues — Sudhir Joglekar (as stated by Siddhesh Joglekar)",
+      "Short film presented by Siddhesh Joglekar",
+      "Producing — placed with Akshay Telemedia in the family brief; poster and stills not yet supplied",
     ],
   },
   tbd: [
     {
       title: "Telefilms — titles to be confirmed",
-      detail: "The brief includes telefilm producing. Individual titles were not on public listings used here.",
+      detail: "The brief includes telefilm producing. Individual titles wait on the family list.",
     },
     {
       title: "Serials produced — titles to be confirmed",
       detail: "Serial producing is part of the banner’s work. Names will be added when supplied.",
     },
     {
-      title: "Further documentaries — titles to be confirmed",
-      detail:
-        "LinkedIn associates the Akshaya work with documentary and TV programme-making. Other documentary titles were not found on the open web for this site.",
+      title: "Documentaries — titles to be confirmed",
+      detail: "Documentary work is part of the practice. Titles will be listed from the family file, not from mixed open-web results.",
     },
   ],
 };
 
 export const stills = [
   {
-    src: "/assets/sudhir-joglekar-headshot.jpg",
-    alt: "Sudhir Joglekar, formal portrait in a grey suit",
-    caption: "Portrait from the public Talentrack profile.",
+    src: "/assets/portrait-nehru-vest-1.jpg",
+    alt: "Sudhir Vinayak Joglekar in a light Nehru jacket, looking toward the camera",
+    caption: "Client portrait.",
+    hero: true,
   },
   {
-    src: "/assets/sudhir-joglekar-still-maroon.jpg",
-    alt: "Sudhir Joglekar in a maroon shirt against a green wall",
-    caption: "Portfolio still, Talentrack.",
+    src: "/assets/portrait-blue-shirt.jpg",
+    alt: "Sudhir Vinayak Joglekar in a blue shirt against an orange wall",
+    caption: "Client portrait.",
   },
   {
-    src: "/assets/sudhir-joglekar-still-yellow.jpg",
-    alt: "Sudhir Joglekar in a yellow checked shirt by a window",
-    caption: "Portfolio still, Talentrack.",
+    src: "/assets/portrait-nehru-vest-2.jpg",
+    alt: "Sudhir Vinayak Joglekar in a light Nehru jacket, looking aside",
+    caption: "Client portrait.",
   },
   {
-    src: "/assets/sudhir-joglekar-still-pink.jpg",
-    alt: "Sudhir Joglekar in a light pink shirt",
-    caption: "Portfolio still, Talentrack.",
+    src: "/assets/portrait-maroon-smile.jpg",
+    alt: "Sudhir Vinayak Joglekar in a maroon shirt, smiling",
+    caption: "Client portrait.",
   },
   {
-    src: "/assets/sudhir-joglekar-still-family.jpg",
-    alt: "Sudhir Joglekar in a white Gandhi cap and glasses, with a family member who is not named here",
-    caption:
-      "Informal portfolio photograph. The second person is unidentified on the source listing and is not named on this site.",
+    src: "/assets/portrait-with-partner.jpg",
+    alt: "Sudhir Vinayak Joglekar with a family member; she is not named on this site",
+    caption: "Client photograph. The second person is not named here.",
   },
 ];
+
+export const hero = stills[0];
+export const secondaryPortrait = stills[1];
