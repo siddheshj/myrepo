@@ -1,0 +1,129 @@
+---
+import Base from "../layouts/Base.astro";
+import { hero, secondaryPortrait, site } from "../data/site.js";
+---
+
+<Base
+  title={`${site.fullName} — Actor, Writer, Producer`}
+  description="Personal site for Sudhir Vinayak Joglekar: Marathi and Hindi actor, writer, and producer. Akshay Telemedia / अक्षय क्रिएशन्स. Mumbai."
+>
+  <div class="wrap hero">
+    <div>
+      <p class="kicker">{site.location} · Marathi & Hindi</p>
+      <h1>
+        {site.name}
+        <span class="mr" style="display:block; font-size:0.38em; letter-spacing:0.08em; color:var(--royal); margin-top:0.2em;">
+          {site.fullNameMr}
+        </span>
+      </h1>
+      <p class="lede">{site.tagline}</p>
+      <ul class="chips">
+        {site.roles.map((role) => <li>{role}</li>)}
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="/journey">The journey</a>
+        <a class="btn btn-ghost" href="/contact">Enquire</a>
+      </div>
+    </div>
+    <div>
+      <figure class="film-frame reveal">
+        <img src={hero.src} alt={hero.alt} width="720" height="960" />
+      </figure>
+      <p class="caption">{hero.caption}</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <hr class="rule" />
+    <section class="section">
+      <div class="infographic">
+        <div class="stat reveal">
+          <b>5</b>
+          <span>Crafts in the house</span>
+        </div>
+        <div class="stat reveal">
+          <b>2014</b>
+          <span>Jab I Met… published</span>
+        </div>
+        <div class="stat reveal">
+          <b>TBD</b>
+          <span>Acting & radio titles</span>
+        </div>
+        <div class="stat reveal">
+          <b class="mr" style="font-size:1.8rem;">अक्षय</b>
+          <span>Telemedia / Creations banner</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="section" style="padding-top:0;">
+      <div class="section-head">
+        <div>
+          <p class="kicker">On the record</p>
+          <h2>His work, not someone else’s.</h2>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="poster book">
+            <img src="/assets/book-jab-i-met.jpg" alt="Cover of Jab I Met… by Sudhir Vinayak Joglekar" />
+          </div>
+          <p class="meta" style="margin-top:1rem;">2014 · Book</p>
+          <h3>Jab I Met…</h3>
+          <p>English stories by Sudhir Vinayak Joglekar. The client cover is on the Writing page.</p>
+          <p><a href="/writing">Writing</a></p>
+        </article>
+        <article class="tbd reveal">
+          <span class="badge">Artwork to come</span>
+          <h3>The Blue Revolution / Nil Kranti</h3>
+          <p>
+            Recent short film, as stated by Siddhesh Joglekar — story, screenplay and dialogues; producing with
+            Akshay Telemedia. Poster still to come.
+          </p>
+          <p><a href="/producing">Producing spotlight</a></p>
+        </article>
+        <article class="tbd reveal">
+          <span class="badge">Titles TBD</span>
+          <h3>Acting</h3>
+          <p>
+            Stage and screen in Marathi and Hindi. Named film credits that belong to another Sudhir Joglekar are
+            not listed here.
+          </p>
+          <p><a href="/acting">Acting file</a></p>
+        </article>
+        <article class="tbd reveal">
+          <span class="badge">Cover to come</span>
+          <h3>Akshay Katha</h3>
+          <p>Named in the family brief. A cover scan will replace this card.</p>
+          <p><a href="/writing">Writing</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="section" style="padding-top:0;">
+      <div class="grid-2">
+        <div class="reveal">
+          <p class="kicker">Craft</p>
+          <h2>Actor. Writer. Producer.</h2>
+          <p>
+            The house is {site.brand.en} / <span class="mr">{site.brand.mr}</span>: acting, writing, producing,
+            radio, and documentaries. Where a title is not yet in the family file, this site stays blank rather
+            than borrow another man’s credits.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-solid" href="/writing">Writing</a>
+            <a class="btn btn-ghost" href="/producing">Producing</a>
+          </div>
+        </div>
+        <figure class="reveal">
+          <img src={secondaryPortrait.src} alt={secondaryPortrait.alt} />
+          <figcaption class="caption">{secondaryPortrait.caption}</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</Base>

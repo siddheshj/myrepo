@@ -1,0 +1,54 @@
+---
+import { nav, site } from "../data/site.js";
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <img class="brand-mark" src="/assets/brand-mark.svg" width="42" height="42" alt="" />
+      <span class="brand-text">
+        <strong>{site.name}</strong>
+        <span>{site.brand.en}</span>
+      </span>
+    </a>
+    <nav class="nav" id="site-nav" data-nav aria-label="Primary">
+      <ul class="nav-list">
+        {
+          nav.map((item) => {
+            const current = item.href === "/" ? path === "/" : path === item.href;
+            return (
+              <li>
+                <a href={item.href} aria-current={current ? "page" : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+    <div class="header-tools">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 14.3A8.5 8.5 0 0 1 9.7 3 7 7 0 1 0 21 14.3z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 3v1.5M12 19.5V21M4.9 4.9l1.1 1.1M18 18l1.1 1.1M3 12h1.5M19.5 12H21M4.9 19.1L6 18M18 6l1.1-1.1"></path>
+        </svg>
+      </button>
+      <button
+        class="nav-toggle"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Menu"
+      >
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

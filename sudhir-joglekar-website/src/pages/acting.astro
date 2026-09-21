@@ -1,0 +1,55 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, stills } from "../data/site.js";
+---
+
+<Base
+  title={`Acting — ${site.fullName}`}
+  description="Acting by Sudhir Vinayak Joglekar. Named film credits that belong to another person of the same name are not listed."
+>
+  <div class="wrap page-hero">
+    <p class="kicker">On screen & stage</p>
+    <h1>Acting</h1>
+    <p>
+      Performance is part of the craft — Marathi and Hindi, stage and screen. Individual titles will be published
+      from Sudhir’s own file. Credits that belong to another Sudhir Joglekar are not used here.
+    </p>
+  </div>
+
+  <div class="wrap section" style="padding-top:0.5rem;">
+    <div class="grid-2">
+      <article class="tbd reveal">
+        <span class="badge">Titles TBD</span>
+        <h2>Films</h2>
+        <p>
+          Feature and telefilm acting titles wait on confirmation. This page will not list another actor’s
+          filmography.
+        </p>
+      </article>
+      <article class="tbd reveal">
+        <span class="badge">Titles TBD</span>
+        <h2>Plays & television</h2>
+        <p>Stage and television roles will be named when the family list arrives.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Portraits</p>
+        <h2>Client stills</h2>
+      </div>
+    </div>
+    <div class="gallery">
+      {
+        stills.map((still) => (
+          <figure class="reveal">
+            <img src={still.src} alt={still.alt} />
+            <figcaption class="caption">{still.caption}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</Base>

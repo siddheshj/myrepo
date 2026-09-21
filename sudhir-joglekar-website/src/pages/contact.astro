@@ -1,0 +1,92 @@
+---
+import Base from "../layouts/Base.astro";
+import { secondaryPortrait, site } from "../data/site.js";
+---
+
+<Base
+  title={`Contact — ${site.fullName}`}
+  description="Enquire with Sudhir Vinayak Joglekar and Akshay Telemedia for acting, writing, producing, radio, and documentary work."
+>
+  <div class="wrap page-hero">
+    <p class="kicker">Akshay Telemedia</p>
+    <h1>Contact</h1>
+    <p>
+      For acting, writing, producing, radio, or documentary enquiries. The banner on the letterhead is
+      <strong>{site.brand.en}</strong> / <span class="mr">{site.brand.mr}</span>.
+    </p>
+  </div>
+
+  <div class="wrap section" style="padding-top:0.4rem;">
+    <div class="grid-2">
+      <form
+        class="card"
+        name="contact"
+        method="POST"
+        action="/thank-you"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        data-contact-form
+        data-ajax="true"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hp">
+          <label>
+            Don’t fill this out
+            <input name="bot-field" />
+          </label>
+        </p>
+        <label>
+          Name
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" autocomplete="tel" />
+        </label>
+        <label>
+          About
+          <select name="about">
+            <option>Acting</option>
+            <option>Writing</option>
+            <option>Producing</option>
+            <option>Radio</option>
+            <option>Documentary</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+        <button class="btn btn-solid" type="submit">Send enquiry</button>
+        <p class="form-status" data-form-status></p>
+      </form>
+
+      <div>
+        <figure class="film-frame reveal">
+          <img src={secondaryPortrait.src} alt={secondaryPortrait.alt} />
+        </figure>
+        <p class="caption">{secondaryPortrait.caption}</p>
+        <div class="card" style="margin-top:1rem;">
+          <p class="meta">Direct</p>
+          <p>
+            <a href={`mailto:${site.email}`}>{site.email}</a>
+          </p>
+          <p>
+            {site.letterhead.lines[0]}<br />
+            {site.letterhead.lines[1]}
+          </p>
+          <p class="caption">{site.letterhead.note}</p>
+          <p>
+            <a href={site.links.linkedin}>LinkedIn</a><br />
+            <a href={site.links.youtube}>Akshaya International on YouTube</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>

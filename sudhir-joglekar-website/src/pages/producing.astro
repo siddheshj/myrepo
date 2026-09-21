@@ -1,0 +1,66 @@
+---
+import Base from "../layouts/Base.astro";
+import { producing, site } from "../data/site.js";
+---
+
+<Base
+  title={`Producing — ${site.fullName}`}
+  description="Akshay Telemedia productions: documentaries, telefilms, and The Blue Revolution / Nil Kranti."
+>
+  <div class="wrap page-hero">
+    <p class="kicker">{site.brand.en}</p>
+    <h1>Producing</h1>
+    <p>
+      {producing.banner}
+      Letterhead address: {site.letterhead.lines.join(" ")}
+    </p>
+    <p class="mr" style="font-size:1.4rem; color:var(--royal);">{site.brand.mr}</p>
+  </div>
+
+  <div class="wrap">
+    <section class="spotlight reveal">
+      <div class="spotlight-copy">
+        <p class="kicker" style="color:var(--orange);">{producing.nilKranti.kicker}</p>
+        <h2>
+          {producing.nilKranti.titleEn}
+          <span class="mr" style="display:block; font-size:0.55em; margin-top:0.25em;">
+            {producing.nilKranti.titleMr}
+          </span>
+        </h2>
+        <p class="mr" style="font-size:1.35rem;">{producing.nilKranti.loglineMr}</p>
+        <p class="mr">{producing.nilKranti.synopsisMr}</p>
+        <ul>
+          {producing.nilKranti.credits.map((line) => <li>{line}</li>)}
+        </ul>
+      </div>
+      <div class="tbd placeholder-art">
+        <div>
+          <span class="badge">Poster to come</span>
+          <p class="glyph">नी</p>
+          <h3>Nil Kranti</h3>
+          <p>No client poster yet. This card stays empty rather than invent artwork.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap section">
+    <div class="section-head">
+      <div>
+        <p class="kicker">The rest of the slate</p>
+        <h2>Named when we can name it.</h2>
+      </div>
+    </div>
+    <div class="grid-3">
+      {
+        producing.tbd.map((item) => (
+          <article class="tbd reveal">
+            <span class="badge">TBD</span>
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</Base>

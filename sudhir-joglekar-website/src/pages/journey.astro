@@ -1,0 +1,67 @@
+---
+import Base from "../layouts/Base.astro";
+import { journey, site } from "../data/site.js";
+---
+
+<Base
+  title={`Journey — ${site.fullName}`}
+  description="Career infographic for Sudhir Vinayak Joglekar: acting, writing, radio, Akshay Telemedia, and The Blue Revolution / Nil Kranti."
+>
+  <div class="wrap page-hero">
+    <p class="kicker">Infographic</p>
+    <h1>A path, not a mix-up.</h1>
+    <p>
+      This timeline is for <strong>{site.fullName}</strong> only. Acting, radio, and documentary titles stay TBD
+      until the family list arrives. Scroll to walk the line — or sit still; reduced-motion settings show the full
+      timeline at once.
+    </p>
+  </div>
+
+  <div class="wrap">
+    <div class="infographic" style="margin-bottom:2.5rem;">
+      {
+        site.languages.map((lang) => (
+          <div class="stat reveal">
+            <b>{lang.slice(0, 2)}</b>
+            <span>{lang}</span>
+          </div>
+        ))
+      }
+      <div class="stat reveal">
+        <b>TBD</b>
+        <span>Untitled work stays blank</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-top:0;">
+    <div class="timeline" data-timeline>
+      <div class="timeline-progress" data-progress></div>
+      {
+        journey.map((step, index) => (
+          <article class="step" style={`transition-delay:${index * 40}ms`}>
+            <p class="step-era">
+              Scene {String(index + 1).padStart(2, "0")} · {step.era}
+            </p>
+            <p class="step-year">{step.year}</p>
+            <h2>{step.title}</h2>
+            <p>{step.body}</p>
+            {step.credit && <p class="screenplay">{step.credit}</p>}
+            {step.tbd && (
+              <p>
+                <span class="badge">TBD</span> {step.tbd}
+              </p>
+            )}
+            {step.href && (
+              <p>
+                <a href={step.href}>Open this chapter</a>
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</Base>
+
+<script src="../scripts/journey.js"></script>

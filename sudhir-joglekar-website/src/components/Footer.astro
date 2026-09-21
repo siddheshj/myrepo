@@ -1,0 +1,37 @@
+---
+import { site } from "../data/site.js";
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="kicker">Banner</p>
+      <p>
+        <strong>{site.fullName}</strong><br />
+        <span class="mr">{site.fullNameMr}</span>
+      </p>
+      <p>
+        {site.brand.en} · <span class="mr">{site.brand.mr}</span>
+      </p>
+    </div>
+    <div>
+      <p class="kicker">Enquire</p>
+      <p>
+        <a href={`mailto:${site.email}`}>{site.email}</a><br />
+        <a href="/contact">Contact form</a>
+      </p>
+    </div>
+    <div>
+      <p class="kicker">Elsewhere</p>
+      <p>
+        <a href={site.links.linkedin}>LinkedIn</a><br />
+        <a href={site.links.youtube}>Akshaya International</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap notice">
+    Portraits and the <em>Jab I Met…</em> cover are client-supplied. Other publicity art — including a <em>Nil
+    Kranti</em> poster — is still to come. Placeholder cards mark those gaps. This site is for Sudhir Vinayak
+    Joglekar; it does not use another person of the same name.
+  </div>
+</footer>
